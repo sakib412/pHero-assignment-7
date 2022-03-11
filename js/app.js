@@ -17,7 +17,7 @@ const isLiked = (id) => {
 
 const addToLiked = (id) => {
   likedPostsId.push(id);
-  showPosts(posts);
+  showPosts(posts.filter((post) => !reportedPostsId.includes(post.id)));
 };
 
 const reportPost = (id) => {
